@@ -1,2 +1,3 @@
 # AgenciadeViagensReact
-GrandBlueTravel, projeto agência de viagens com react e redux
+GrandBlueTravel, projeto agência de viagens versão frontend com react,
+versão backend com Java JDBC
