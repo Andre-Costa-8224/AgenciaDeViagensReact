@@ -9,7 +9,7 @@ const Page4 = () => {
         
         <body>
         <main className='App-header'>
-            <section>
+            <section className='fundobranco'>
                 <fieldset>
                     <h1>Login</h1>
                     <form>

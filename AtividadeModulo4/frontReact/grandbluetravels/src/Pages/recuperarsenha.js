@@ -4,7 +4,7 @@ const RecuperarSenha = () => {
     return(
         <body>
             <main className='App-header'>
-                <section>
+                <section className='fundobranco'>
                     <form>
                         <label>Email para recupeção de senha: </label>
                         <br/><br/>

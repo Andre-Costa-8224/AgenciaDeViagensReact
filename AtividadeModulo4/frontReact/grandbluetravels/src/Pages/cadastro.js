@@ -7,7 +7,7 @@ const Cadastro = () => {
         
         <body>
         <main className='App-header'>
-            <section>
+            <section className='fundobranco'>
                 <fieldset>
                     <h1>Cadastro</h1>
                     <form>

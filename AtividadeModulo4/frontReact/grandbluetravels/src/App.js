@@ -15,21 +15,22 @@ const App = () => {
   return (
     <Router>
       <header>
-        <nav className="menu container-fluid" style={{backgroundColor: "lightblue"}}>
-          <div className="menu" style={{marginLeft: '0'}}>
-            <ul className="listmenu submenu">
-              <li>
-                <a href="#" className="links menutitle">MENU</a>
-                <ul className="submenu">
-                <li><Link to="/" className="links">HOME</Link></li>
+        <nav className="navbar navbar-expand-lg navbar-light bg-light" style={{backgroundColor: "lightblue"}}>
+          <div className="container-fluid">
+            <Link class="navbar-brand" to="/">GrandBlue Travels</Link>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div className="collapse navbar-collapse" id="navbarNav">
+              <ul className="listmenu navbar-nav">
+                  <li><Link to="/" className="links">HOME</Link></li>
                   <li><Link to="/users" className="links">DESTINOS</Link></li>
+                  
                   <li><Link to="/contact" className="links">ABOUT US</Link></li>
-                </ul>
-              </li>
-              
-            </ul>
+              </ul>
+            </div>
           </div>
-          <div>
+          <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="listmenu">
               <li><Link to="/login" className="links">LOGIN</Link></li>
             </ul>
@@ -44,6 +45,7 @@ const App = () => {
         <Route path="/login" element={<Page4 />} />
         <Route path="/cadastro" element={<Cadastro />} />
         <Route path="/recovery" element={<RecuperarSenha/>}></Route>
+        
       </Routes>
     </Router>
   );

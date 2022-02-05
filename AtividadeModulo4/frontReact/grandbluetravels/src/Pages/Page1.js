@@ -4,36 +4,90 @@ import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 
 const Page1 = () => {
     return(
-        <body>
+        <>
             <main>
                 <section className='App-header2'>
                     <article className='arttext'>
                         <p>Às vezes, precisamos viajar para bem longe para nos encontrarmos bem de perto. Além de um episódio turístico em outro país, outra cultura, outro modo de viver a vida, viajar também pode ser uma jornada para dentro de si mesmo. É pensando assim que um destino não é só um lugar, mas uma nova maneira de enxergar a vida.</p>
                     </article>
                 </section>
+
                 <section>
-                <div id="carouselExampleControls" class="carousel slide carr" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="https://st2.depositphotos.com/6544740/9337/i/600/depositphotos_93376372-stock-photo-sunset-over-sea-pier.jpg" class="d-block w-100 carrimgs" alt="..."/>
-    </div>
-    <div class="carousel-item">
-      <img src="https://www.artesanatototal.com/wp-content/uploads/2019/02/Imagens-de-paisagens4.jpg" class="d-block w-100 carrimgs" alt="..."/>
-    </div>
-    <div class="carousel-item">
-      <img src="https://blog.tudoprafoto.com/wp-content/uploads/2017/09/imagens-natureza-paisagens-42.jpg" class="d-block w-100 carrimgs" alt="..."/>
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
+                  <div className='gridcontainer cardsviagens'>
+                    <div className="card item1">
+                      <img src="https://s2.glbimg.com/PWzElwICb5ItVqUPSQmj6bxMkSY=/620x455/e.glbimg.com/og/ed/f/original/2014/07/29/caverna-melissani-kefalonia-grecia.jpg" class="card-img-top" alt="" height={'285px'}/>
+                      <div class="card-body">
+                        <h5 class="card-title">Voos para o paraíso das cachoeiras – Passagem aérea 2022</h5>
+                        <p class="card-text">Para Quem Tem 24 Horas De Flexibilidade O Voo PROMO Tem O Menor Preço Da Internet.</p>
+                        <Link to="/users" className="links">Comprar</Link>
+                      </div>
+                    </div>
+
+                    <div className="card item1">
+                      <img src="https://viagemeturismo.abril.com.br/wp-content/uploads/2016/10/cachoeira-de-seljalandsfoss-na-islandia.jpeg?quality=70&strip=info&w=926" class="card-img-top" alt="" height={'285px'}/>
+                      <div class="card-body">
+                        <h5 class="card-title">Voos para o paraíso das cachoeiras – Passagem aérea 2022</h5>
+                        <p class="card-text">Para Quem Tem 24 Horas De Flexibilidade O Voo PROMO Tem O Menor Preço Da Internet.</p>
+                        <Link to="/users" className="links">Comprar</Link>
+                      </div>
+                    </div>
+
+                    <div className="card item1">
+                      <img src="https://img.elo7.com.br/product/600x380/2D538E2/papel-de-parede-paisagem-cascata-cachoeira-floresta-gg817-papel-de-parede-cachoeira.jpg" class="card-img-top" alt="" height={'285px'}/>
+                      <div class="card-body">
+                        <h5 class="card-title">Voos para o paraíso das cachoeiras – Passagem aérea 2022</h5>
+                        <p class="card-text">Para Quem Tem 24 Horas De Flexibilidade O Voo PROMO Tem O Menor Preço Da Internet.</p>
+                        <Link to="/users" className="links">Comprar</Link>
+                      </div>
+                    </div>
+
+                    <div className="card item1">
+                      <img src="https://img.elo7.com.br/product/original/257AA43/painel-adesivo-papel-parede-paisagem-cachoeira-natureza-adesivo-painel-cachoeira.jpg" class="card-img-top" alt="" height={'285px'}/>
+                      <div class="card-body">
+                        <h5 class="card-title">Voos para o paraíso das cachoeiras – Passagem aérea 2022</h5>
+                        <p class="card-text">Para Quem Tem 24 Horas De Flexibilidade O Voo PROMO Tem O Menor Preço Da Internet.</p>
+                        <Link to="/users" className="links">Comprar</Link>
+                      </div>
+                    </div>
+
+                    <div className="card item1">
+                      <img src="https://http2.mlstatic.com/D_NQ_NP_637912-MLB40486410862_012020-O.jpg" class="card-img-top" alt="" height={'285px'}/>
+                      <div class="card-body">
+                        <h5 class="card-title">Voos para o paraíso das cachoeiras – Passagem aérea 2022</h5>
+                        <p class="card-text">Para Quem Tem 24 Horas De Flexibilidade O Voo PROMO Tem O Menor Preço Da Internet.</p>
+                        <Link to="/users" className="links">Comprar</Link>
+                      </div>
+                    </div>
+
+                    <div className="card item1">
+                      <img src="https://imagens.mdig.com.br/natureza/belas_cachoeiras_naturais_mundo_22.jpg" class="card-img-top" alt="" height={'285px'}/>
+                      <div class="card-body">
+                        <h5 class="card-title">Voos para o paraíso das cachoeiras – Passagem aérea 2022</h5>
+                        <p class="card-text">Para Quem Tem 24 Horas De Flexibilidade O Voo PROMO Tem O Menor Preço Da Internet.</p>
+                        <Link to="/users" className="links">Comprar</Link>
+                      </div>
+                    </div>
+
+                    <div className="card item1">
+                      <img src="https://www.bigblueviagens.com.br/wp-content/uploads/2016/10/cachoeira-min-2.jpg" class="card-img-top" alt="" height={'285px'}/>
+                      <div class="card-body">
+                        <h5 class="card-title">Voos para o paraíso das cachoeiras – Passagem aérea 2022</h5>
+                        <p class="card-text">Para Quem Tem 24 Horas De Flexibilidade O Voo PROMO Tem O Menor Preço Da Internet.</p>
+                        <Link to="/users" className="links">Comprar</Link>
+                      </div>
+                    </div>
+
+                    <div className="card item1">
+                      <img src="https://static.vecteezy.com/ti/fotos-gratis/p1/783252-cachoeiras-paisagem-foto.jpg" class="card-img-top" alt="" height={'285px'}/>
+                      <div class="card-body">
+                        <h5 class="card-title">Voos para o paraíso das cachoeiras – Passagem aérea 2022</h5>
+                        <p class="card-text">Para Quem Tem 24 Horas De Flexibilidade O Voo PROMO Tem O Menor Preço Da Internet.</p>
+                        <Link to="/users" className="links">Comprar</Link>
+                      </div>
+                    </div>
+                  </div>
                 </section>
+                
                 <section className='App-header2'>
                     <article className='arttext'>
                         <p>Viajar tem a ver com viver experiências: quanto mais completa de passeios, culturas, aventuras, descobertas e imersões sua viagem for, mais rico fica seu repertório e mais valem os dias fora de casa. É por isso que a GrandBlueTravel existe, dando diversas opções e segurança em suas escolhas.</p>
@@ -41,7 +95,7 @@ const Page1 = () => {
                 </section>
             </main>
             <footer className='rodape'><span>&copy; André F S Costa - Contato: andrecosta8224@gmail.com</span></footer>
-        </body>
+      </>
     )
 }
 
