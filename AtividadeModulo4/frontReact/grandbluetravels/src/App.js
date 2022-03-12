@@ -1,53 +1,53 @@
-import logo from "./logo.svg";
 import "./App.css";
-
+import React from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-
-import Page1 from "./Pages/Page1";
-import Page2 from "./Pages/Page2";
-import Page3 from "./Pages/Page3";
-import Page4 from "./Pages/Page4";
+import Cabecalho from "./Pages/Home/Header";
+import Secao1 from "./Pages/Home/Section";
+import Destinos from "./Pages/Viagens/Destination";
+import Acessar from "./Pages/Usuario/Login";
 import { waitForElementToBeRemoved } from "@testing-library/react";
-import RecuperarSenha from "./Pages/recuperarsenha";
-import Cadastro from "./Pages/cadastro";
+import RecuperarSenha from "./Pages/Usuario/Recovery";
+import Cadastro from "./Pages/Usuario/Subscribe";
+import { Rodape } from "./Pages/Home/Footer";
+import Sobre from "./Pages/Home/About";
+import { AuthContext, useAuth } from "./providers/auth";
+import Perfil from "./Pages/Usuario/Profile";
 
 const App = () => {
-  return (
-    <Router>
-      <header>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light" style={{backgroundColor: "lightblue"}}>
-          <div className="container-fluid">
-            <Link class="navbar-brand" to="/">GrandBlue Travels</Link>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="navbarNav">
-              <ul className="listmenu navbar-nav">
-                  <li><Link to="/" className="links">HOME</Link></li>
-                  <li><Link to="/users" className="links">DESTINOS</Link></li>
-                  
-                  <li><Link to="/contact" className="links">ABOUT US</Link></li>
-              </ul>
-            </div>
-          </div>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="listmenu">
-              <li><Link to="/login" className="links">LOGIN</Link></li>
-            </ul>
-          </div>
-        </nav>
-      </header>
 
+  const {user} = useAuth();
+  const userStorage = localStorage.getItem("user");
+
+  console.log(user.nome)
+  console.log(user.nome == "")
+
+  var caminho = <Secao1 />
+
+  if (userStorage == null) {
+    caminho = <Acessar />
+  }
+  else{
+    caminho = <Secao1 />
+  }
+
+  //console.log(userStorage)
+
+  return (
+    <div>
+    <Router>
+    <Cabecalho/>
       <Routes>
-        <Route path="/" exact element={<Page1 />} />
-        <Route path="/users" element={<Page2 />} />
-        <Route path="/contact" element={<Page3 />} />
-        <Route path="/login" element={<Page4 />} />
-        <Route path="/cadastro" element={<Cadastro />} />
+        <Route path="/" exact element={<Secao1 />} />
+        <Route path="/destinos" element={<Destinos />} />
+        <Route path="/sobre" element={<Sobre />} />
+        <Route path='/cadastro' element={caminho}/>
+        <Route path="/login" element={<Cadastro />} />
         <Route path="/recovery" element={<RecuperarSenha/>}></Route>
-        
+        <Route path="/perfil" element={<Perfil/>}></Route>
       </Routes>
     </Router>
+    <Rodape/>
+    </div>
   );
 };
 

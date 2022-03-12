@@ -1,29 +1,54 @@
-.gridcontainer{
-  display: inline-grid;
-  grid-template-columns: auto auto auto;
-  background-color: rgb(236, 250, 249);
-  gap: 100px;
-  
+
+.carditem{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
 }
 
-.card-text{
-  font-size: large;
-}
-
-.gridcontainer div{
-  background-color: white;
+.cor-alert{
+  background-color: rgb(255, 217, 0);
+  padding: 12px;
+  border-radius: 5px;
   text-align: center;
-  padding: 20px;
-  font-size: 30px;
+  font-weight: bold;
 }
 
-.cardsviagens{
-  padding: 50px;
-  animation: transicao1 2s infinite alternate;
+.cor-alert i{
+  font-size: xx-large;
+}
+
+.divcard{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  text-align: center;
+  width: 25%;
+  border: 2px solid rgba(0, 98, 255, 0.37);
+}
+
+.card-img-top{
+  height: 19vmax;
+}
+
+.card-body{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+}
+
+/*
+.carditem div img{
+  border: 2px solid rgb(0, 255, 200);
 }
 
 
 
+
+*/
 .arttext{
   background-color: #e7ecf1;
   width: 70%;
@@ -76,36 +101,17 @@
 }
 
 @media (max-width: 935px){
-  .gridcontainer{
-    grid-template-columns: auto auto;
-  }
-  .cardsviagens{
-    padding: 4px;
-  }
-  .card-text{
-    font-size: large;
-  }
   .links{
     font-size: large;
   }
 }
 
-@media (max-width: 630px){
-  .gridcontainer{
-    grid-template-columns: auto;
-  }
-  .cardsviagens{
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
-  .card-text{
-    font-size: medium;
-  }
-}
-
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 675px){
   .fundobranco{
     width: 95%;
+  }
+  .divcard{
+    width: 50%;
   }
 }
 
