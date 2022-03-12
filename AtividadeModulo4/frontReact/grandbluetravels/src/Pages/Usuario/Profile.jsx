@@ -28,7 +28,7 @@ const Perfil = () => {
     <div className='App-header'>
         <section style={{backgroundColor: "wheat", padding: "20px", borderRadius: "8px"}}>
             <h1>Perfil</h1>
-            <h3>nome: {user.nome}</h3>
+            <h3>Nome: {user.nome}</h3>
         </section>
         <br />
         
